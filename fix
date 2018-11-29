@@ -1,5 +1,6 @@
 lines = open("summary2").read().splitlines()[1:]
-open("summary3", "w+"):
+with open("summary3", "w+") as f:
     for line in lines:
         c, u, r = [float(v) for v in line.split(",")[2:5]]
         ev = 7.6 * c + 3.23 * u + 1.17 * r
+        f.write("%s, %s, %.3f, %.3f, %.3f, %.3f, %s\n" % (line[0], line[1], c, u, r, ev, line[-1]))
