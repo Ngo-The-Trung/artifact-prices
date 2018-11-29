@@ -54,6 +54,6 @@ while True:
     pack_ev = 7.6 * avg_common_price + 3.23 * avg_uncommon_price + 1.17 * avg_rare_price
     now = int(time.time())
     print(f"[ {datetime.datetime.now().strftime('%m-%d %H:%M ')}] - average common - {avg_common_price:{3}.{3}}, uncommon - {avg_uncommon_price:{3}.{3}}, rare - {avg_rare_price:{3}.{3}}, TOTAL - {total:.2f} $")
-    open("summary", "a+").write(f"{now}, {datetime.datetime.now().strftime('%m-%d %H:%M')}, {avg_common_price:{3}.{3}}, {avg_uncommon_price:{3}.{3}}, {avg_rare_price:{3}.{3}}, {pack_ev:.2f}, {total:.2f}\n")
+    open("summary", "a+").write(f"{now}, {datetime.datetime.now().strftime('%m-%d %H:%M')}, {avg_common_price:{3}.{3}}, {avg_uncommon_price:{3}.{3}}, {avg_rare_price:{3}.{3}}, {pack_ev:.3f}, {total:.2f}\n")
 
     time.sleep(60 - now % 60)
