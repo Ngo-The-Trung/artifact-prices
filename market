@@ -51,8 +51,8 @@ while True:
             else:
                     total += 3 * price[cost]
 
-    print(f"[ {datetime.datetime.now().strftime('%m-%d %H:%M ')}] - average common - {avg_common_price:{3}.{3}}, uncommon - {avg_uncommon_price:{3}.{3}}, rare - {avg_rare_price:{3}.{3}}, TOTAL - {total:.2f} $")
-    open("summary", "a+").write(f"{avg_common_price:{3}.{3}}, {avg_uncommon_price:{3}.{3}}, {avg_rare_price:{3}.{3}}, {total:.2f}\n")
-
     now = int(time.time())
+    print(f"[ {datetime.datetime.now().strftime('%m-%d %H:%M ')}] - average common - {avg_common_price:{3}.{3}}, uncommon - {avg_uncommon_price:{3}.{3}}, rare - {avg_rare_price:{3}.{3}}, TOTAL - {total:.2f} $")
+    open("summary", "a+").write(f"{now}, {datetime.datetime.now().strftime('%m-%d %H:%M ')}, {avg_common_price:{3}.{3}}, {avg_uncommon_price:{3}.{3}}, {avg_rare_price:{3}.{3}}, {total:.2f}\n")
+
     time.sleep(60 - now % 60)
