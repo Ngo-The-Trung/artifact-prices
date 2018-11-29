@@ -1,1 +1,5 @@
-lines = open("summary").read().splitlines()[1:]
+lines = open("summary2").read().splitlines()[1:]
+open("summary3", "w+"):
+    for line in lines:
+        c, u, r = [float(v) for v in line.split(",")[2:5]]
+        ev = 7.6 * c + 3.23 * u + 1.17 * r
