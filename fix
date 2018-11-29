@@ -1,0 +1,7 @@
+#!/usr/bin/python
+
+lines = open("summary").read().splitlines()[1:]
+
+for line in lines:
+    tokens = line.split(", ")
+    c, u, r = [float(v) for v in tokens[2:5]]
