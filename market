@@ -1,7 +1,6 @@
 #!/usr/bin/python2
 
 import urllib.request, json, time, datetime
-import numpy as np
 
 url_prefix = "https://steamcommunity.com/market/search/render/?search_descriptions=0&category_583950_Rarity%5B%5D="
 url_suffix = "&sort_dir=desc&appid=583950&norender=1&count=500"
